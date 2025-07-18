@@ -18,7 +18,7 @@ export function Header() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <h1 className="text-xl font-bold gradient-text">
-              Sagawa Kyouhei
+              Sagawa Kyohei
             </h1>
           </motion.div>
           

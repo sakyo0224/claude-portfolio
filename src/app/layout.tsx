@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sagawa Kyouhei - Portfolio",
+  title: "Sagawa Kyohei - Portfolio",
   description: "技術に情熱を持つソフトウェア開発者のポートフォリオサイト。モダンなWebアプリケーションの構築に取り組んでいます。",
   keywords: ["フロントエンド開発", "React", "Next.js", "TypeScript", "Web開発", "UI/UX"],
-  authors: [{ name: "Sagawa Kyouhei" }],
-  creator: "Sagawa Kyouhei",
-  publisher: "Sagawa Kyouhei",
+  authors: [{ name: "Sagawa Kyohei" }],
+  creator: "Sagawa Kyohei",
+  publisher: "Sagawa Kyohei",
   robots: "index, follow",
   openGraph: {
     type: "website",
     locale: "ja_JP",
     url: "https://your-domain.vercel.app",
-    title: "Sagawa Kyouhei - Portfolio",
+    title: "Sagawa Kyohei - Portfolio",
     description: "技術に情熱を持つソフトウェア開発者のポートフォリオサイト",
-    siteName: "Sagawa Kyouhei Portfolio",
+    siteName: "Sagawa Kyohei Portfolio",
     images: [
       {
         url: "/og-image.jpg",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sagawa Kyouhei - Portfolio",
+    title: "Sagawa Kyohei - Portfolio",
     description: "技術に情熱を持つソフトウェア開発者のポートフォリオサイト",
     images: ["/og-image.jpg"],
     creator: "@yourusername",

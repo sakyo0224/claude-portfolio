@@ -22,9 +22,13 @@ export function SocialLinkComponent({ social, index }: SocialLinkProps) {
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.3, delay: index * 0.1 }}
       viewport={{ once: true }}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-      className="group flex items-center justify-center w-12 h-12 bg-card border rounded-lg hover:shadow-lg transition-all duration-300"
+      whileHover={{ 
+        scale: 1.15,
+        rotate: 5,
+        transition: { duration: 0.2 }
+      }}
+      whileTap={{ scale: 0.9 }}
+      className="group flex items-center justify-center w-12 h-12 bg-card border rounded-lg hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 hover:border-primary/50"
     >
       {IconComponent && (
         <IconComponent 

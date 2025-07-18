@@ -19,18 +19,26 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
-      whileHover={{ y: -5 }}
+      whileHover={{ 
+        y: -8,
+        scale: 1.02,
+        transition: { duration: 0.2 }
+      }}
       className="h-full"
     >
-      <Card className="h-full overflow-hidden hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/20">
+      <Card className="h-full overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 border-border/50 hover:border-primary/30 group">
         <div className="relative h-48 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 bg-black/5" />
           <div className="relative z-10 text-center">
-            <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
+            <motion.div 
+              className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform duration-300"
+              whileHover={{ rotate: 360 }}
+              transition={{ duration: 0.6 }}
+            >
               <span className="text-2xl font-bold text-primary">
                 {project.title.charAt(0)}
               </span>
-            </div>
+            </motion.div>
             <p className="text-sm text-muted-foreground font-medium">
               {formatDate(project.completedAt)}
             </p>
@@ -68,37 +76,41 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
           <div className="flex gap-2 pt-2">
             {project.liveUrl && (
-              <a
+              <motion.a
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <Button
                   size="sm"
-                  className="w-full flex items-center gap-2"
+                  className="w-full flex items-center gap-2 hover:bg-primary/90 transition-colors"
                 >
                   <ExternalLink className="w-4 h-4" />
                   Live Demo
                 </Button>
-              </a>
+              </motion.a>
             )}
             {project.githubUrl && (
-              <a
+              <motion.a
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <Button
                   size="sm"
                   variant="outline"
-                  className="w-full flex items-center gap-2"
+                  className="w-full flex items-center gap-2 hover:bg-accent transition-colors"
                 >
                   <Github className="w-4 h-4" />
                   GitHub
                 </Button>
-              </a>
+              </motion.a>
             )}
           </div>
         </CardContent>
